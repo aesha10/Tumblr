@@ -1,0 +1,180 @@
+@import 'normalize';
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #88D0AD;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  padding: 7em 0 0 0;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: #FFF;
+  padding: 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #23527c;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+.post_wrapper {
+  padding: 1.9em;
+  border-bottom: 1px solid #d6dce0;
+  .title {
+    margin: 2px;
+    a {
+      font-weight: 500;
+      text-decoration: none;
+      color: #529FCD;
+      font-size: 1.2em;
+      &:hover {
+        color: #22487b;
+      }
+    }
+  }
+  .date_and_author {
+    color: #22487b;
+    margin: .5em 0 0 0;
+  }
+  .body {
+    color: #d3d3d3;
+    margin: .5em 0 0 0;
+  }
+}
+
+#post_content {
+  padding: 1em 3em;
+  .title {
+    font-weight: 500;
+    text-decoration: none;
+    color: #529FCD;
+    font-size: 2.5em;
+    margin-bottom: 0;
+  }
+  .body {
+    font-size: 1.1em;
+    line-height: 1.75;
+  }
+  .date_and_author {
+    color: #9eafba;
+    margin: 1em 0 2em 0;
+  }
+  #comments {
+    h2 {
+      margin: 3em 0 1em 0;
+      border-bottom: 1px solid #d6dce0;
+      padding-bottom: 0.5em;
+    }
+    h3 {
+      margin-top: 2em;
+    }
+    .comment {
+      border-bottom: 1px solid #d6dce0;
+      padding: 1.5em 2em;
+      .clear_both {
+        clear: both;
+      }
+      &:after {
+        clear: both;
+      }
+      .comment_content {
+        float: left;
+        .comment_name {
+          margin: 1em 0 0 0;
+          font-size: 1.0em;
+          text-transform: uppercase;
+        }
+        .comment_body {
+          font-size: 1.2em;
+          margin: 0.2em 0 0 0;
+        }
+        .comment_time {
+          margin-top: 1.2em;
+          font-size: .8em;
+        }
+      }
+      .button {
+        float: right;
+      }
+    }
+    input[type="text"], textarea {
+      width: 50%;
+    }
+  }
+}
+
+#page_wrapper {
+  padding: 3em;
+  #profile_image {
+    width: 300px;
+    float: left;
+    margin-right: 2em;
+    img {
+      width: 100%;
+      border-radius: 0.35em;
+    }
+  }
+  #content {
+    h1 {
+      font-weight: 500;
+    }
+    p {
+      font-size: 1.1em;
+      line-height: 1.75;
+    }
+    a {
+      color: #33acb7;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
