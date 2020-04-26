@@ -2,6 +2,17 @@
   <h1 class="title">Make Something!</h1>
 
   <%= form_for :post, url: posts_path do |f| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h4><%= pluralize(@post.errors.count, "error") %> stopped this post from saving</h4>
+        <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <div class="form-group">
       <%= f.label :title %> <br>
       <%= f.text_field :title, :class => "form-control" %>
