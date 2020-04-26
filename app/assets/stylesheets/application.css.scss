@@ -113,6 +113,7 @@ div.content {
       margin: 3em 0 1em 0;
       border-bottom: 1px solid #d6dce0;
       padding-bottom: 0.5em;
+      font-weight: bold;
     }
     h3 {
       margin-top: 2em;
@@ -126,12 +127,14 @@ div.content {
       &:after {
         clear: both;
       }
+
       .comment_content {
         float: left;
         .comment_name {
           margin: 1em 0 0 0;
           font-size: 1.0em;
           text-transform: uppercase;
+          font-weight: bold;
         }
         .comment_body {
           font-size: 1.2em;
